@@ -5,7 +5,9 @@ const PORT = 3000;
 app.use(express.json());
 const hospitalRouter = require('./router/router');
 
-mongoose.connect("mongodb+srv://Abhinav:abhinav123@nodejsproject.pwxex.mongodb.net/hospitaldata?retryWrites=true&w=majority", async (err) => {
+// mongodb+srv://Abhinav:abhinav123@nodejsproject.pwxex.mongodb.net/hospitaldata?retryWrites=true&w=majority
+
+mongoose.connect("mongodb+srv://RahulKD:Rahul@cluster0.zioxa.mongodb.net/hospitaldb?retryWrites=true&w=majority", async (err) => {
   if (err)
     throw err;
   console.log("Connected to MongoDB!");

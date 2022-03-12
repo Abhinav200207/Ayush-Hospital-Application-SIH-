@@ -1,52 +1,48 @@
 const mongoose = require("mongoose");
 
 const hospitalSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, "Name required"],
+    name:{
+        type:"String",
+        required:[true , "name Required2"]
     },
-    hospitalId: {
-        type: String,
-        unique: true,
-        required: [true, "Id required"],
+    hospitalID:{
+        type:"String",
+        unique:true,
+        require:[true , "Email Required"]
     },
-    password: {
-        type: String,
-        required: [true, "Password required"],
-        select: false,
+    password:{
+        type:"String",
+        required:true
     },
-    bedCount: {
-        type: Number,
-        required: [true, "Bed count required"],
+    bedCount :{
+        type :"Number",
+        required:[true , "Bed count required"]
     },
-    criticalBed: {
-        type: Number,
-        required: [true, "Critical Bed count required"],
+    criticalBed:{
+        type:"Number",
+        requred:[true , "Critical count bed required"]
     },
-    oxygencylinderCount: {
-        type: Number,
-        required: [true, "Oxygen cylinder Count count required"],
+    oxygenCylinderCount:{
+        type:"Number",
+        require:[true , "Oxygen Count Required"]
     },
-    bloodAvailability: [
+    bloodTypeAvailability:[
         {
-            bloodname: {
-                type: String,
-                required: [true, "Name required"],
-            },
-            numberofunits: {
-                type: Number,
-                required: [true, "Count required"],
-            }
+            bloodName: {
+               type:"String",
+               required:[true , "Please enter type of blood Available"]
+           }
         }
     ],
-    longitude: {
-        type: String,
-        required: [true, "longitude required"],
+    latitude:{
+        type:"Number",
+        required:true
     },
-    latitude: {
-        type: String,
-        required: [true, "latitude required"],
+    longitude:{
+        type:"Number",
+        required:true
     }
-});
+
+})
 
 module.exports = mongoose.model("Hospital",hospitalSchema);
