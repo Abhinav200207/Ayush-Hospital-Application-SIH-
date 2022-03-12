@@ -4,6 +4,8 @@ const router = express.Router();
 
 router.route("/user").get(getInfoByUser);
 router.route("/createData").post(postHospitalInfo);
-// update router
+router.route("/update").put(updateHospitalInfo);
+// router.route("/login").post(loginIn);
+// router.route("/logout").post(lououtUser);
 
 module.exports = router;
